@@ -106,10 +106,10 @@ pnpm run dev
 	<tbody>
 		<tr>
             <td align="center">
-                <a href="https://github.com/kristoferlund">
-                    <img src="https://avatars.githubusercontent.com/u/9698363?v=4" width="100;" alt="kristoferlund"/>
+                <a href="https://github.com/ilbertt">
+                    <img src="https://avatars.githubusercontent.com/u/12596698?v=4" width="100;" alt="ilbertt"/>
                     <br />
-                    <sub><b>Kristofer</b></sub>
+                    <sub><b>Luca Bertelli</b></sub>
                 </a>
             </td>
 		</tr>
