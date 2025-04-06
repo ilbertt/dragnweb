@@ -1,8 +1,7 @@
-import { useState } from "react";
-import useGreet from "../hooks/use-greet";
-import Bubble from "./bubble";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { useState } from 'react';
+import Bubble from './bubble';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
 
 type TimedBubble = {
   id: number;
@@ -14,7 +13,7 @@ export default function GreetForm() {
 
   const addBubble = (greeting: string) => {
     const id = Date.now();
-    setBubbles((prev) => [
+    setBubbles(prev => [
       ...prev,
       {
         id,
@@ -32,36 +31,35 @@ export default function GreetForm() {
   };
 
   const removeBubble = (id: number) => {
-    setBubbles((prev) => prev.filter((tb) => tb.id !== id));
+    setBubbles(prev => prev.filter(tb => tb.id !== id));
   };
 
-  const { mutate: greet, isPending } = useGreet(addBubble);
-
   const submitAction = (formData: FormData) => {
-    greet(formData.get("name") as string);
+    console.warn('Submit action not implemented', formData);
+    addBubble('not implemented');
+    // TODO: Implement submit action
   };
 
   return (
-    <div className="flex flex-col bg-[#522785] p-10 rounded-xl items-center text-xl text-white gap-5">
+    <div className="flex flex-col items-center gap-5 rounded-xl bg-[#522785] p-10 text-xl text-white">
       <div>Hello stranger, what&apos;s your name?</div>
-      <form className="w-full flex flex-col gap-2" action={submitAction}>
+      <form className="flex w-full flex-col gap-2" action={submitAction}>
         <Input
           type="text"
           name="name"
           placeholder="Name"
-          className="w-full text-lg text-center"
+          className="w-full text-center text-lg"
           data-1p-ignore
         />
         <Button
           type="submit"
-          disabled={isPending}
-          className="w-full text-lg text-[#522785] bg-white/50"
-          size={"lg"}
+          className="w-full bg-white/50 text-lg text-[#522785]"
+          size={'lg'}
         >
           Greet
         </Button>
       </form>
-      {bubbles.map((tb) => tb.bubble)}
+      {bubbles.map(tb => tb.bubble)}
     </div>
   );
 }

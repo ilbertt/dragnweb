@@ -1,12 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute("/about")({
+export const Route = createFileRoute('/about')({
   component: About,
 });
 
 function About() {
   return (
-    <div className="flex flex-col bg-[#29ace2] p-10 rounded-xl items-center text-xl text-white gap-5">
+    <div className="flex flex-col items-center gap-5 rounded-xl bg-[#29ace2] p-10 text-xl text-white">
       <div>
         This template provides a batteries included setup for an ICP/React
         application with the latest versions of Vite, TypeScript, Tailwind CSS,

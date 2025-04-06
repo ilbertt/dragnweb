@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 interface BubbleProps {
   text: string;
@@ -31,7 +31,7 @@ const Bubble: React.FC<BubbleProps> = ({ text, onComplete }) => {
       style={{
         left: `${left.toString()}px`,
       }}
-      className="fixed bottom-10 transform px-4 py-2 bg-[#29abe2] text-white rounded-full shadow-lg text-center animate-float"
+      className="animate-float fixed bottom-10 transform rounded-full bg-[#29abe2] px-4 py-2 text-center text-white shadow-lg"
     >
       {text}
     </div>

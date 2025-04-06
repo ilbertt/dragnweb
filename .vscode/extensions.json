@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "dfinity-foundation.vscode-motoko",
+    "dbaeumer.vscode-eslint",
+    "biomejs.biome"
+  ]
+}

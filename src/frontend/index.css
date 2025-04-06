@@ -1,10 +1,10 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-display: "Arial", "sans-serif";
+  --font-display: 'Arial', 'sans-serif';
   --animate-float: float 3s ease-in;
 
   @keyframes float {
@@ -20,15 +20,15 @@ body {
 }
 
 main {
-  @apply w-full h-lvh flex justify-center items-center bg-radial-[at_50%_50%] from-[#1e005d] to-black to-50% size-24 rounded-full;
+  @apply flex size-24 h-lvh w-full items-center justify-center rounded-full bg-radial-[at_50%_50%] from-[#1e005d] to-black to-50%;
 }
 
 h1 {
-  @apply font-medium text-4xl text-white;
+  @apply text-4xl font-medium text-white;
 }
 
 h2 {
-  @apply font-medium text-2xl text-white;
+  @apply text-2xl font-medium text-white;
 }
 
 :root {
